@@ -1,0 +1,56 @@
+/* GRID SERVICIOS */
+
+.services {
+    background-color: #1e2222;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content 1fr 1fr min-content;
+    overflow: auto;
+    grid-template-areas:
+        "header header"
+        "method method"
+        "plans plans"
+        "footer footer";
+}
+
+.method {
+    grid-area: method;
+    padding: 1rem;
+    background-color: #2C3333;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h2 {
+        padding: 1rem;
+    }
+    p {
+        margin: 1rem;
+    }
+}
+
+
+.plans {
+    grid-area: plans;
+    padding: 1rem;
+    background-color: #3f4b4b;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .call{
+        @include planes ($fondo)
+    }
+    .rutina{
+        @include planes ($fondoGris)
+    }
+    .comida{
+        @include planes ($fondoGris6)
+    }
+    h3 {
+        transition: .3s;
+        &:hover {
+            color: #5f8591;
+            transform: scale(1.2);
+        }
+    }
+}

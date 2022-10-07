@@ -1,0 +1,76 @@
+/* GRID GUIA */
+
+.guia {
+    background-color: #1e2222;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content auto auto min-content;
+    overflow: auto;
+    grid-template-areas:
+        "header header"
+        "foto libro"
+        "comments comments"
+        "footer footer";
+}
+
+.libro {
+    grid-area: libro;
+    padding: 1rem;
+    background-color: #414e52;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    p {
+        text-align: center;
+    }
+
+    button {
+        background-color: #2C3333;
+        border: none;
+        color: #E7F6F2;
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            color: #397686;
+        }
+    }
+
+}
+
+.foto {
+    grid-area: foto;
+    background-color: #313333;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+
+    img {
+        width: 28rem;
+    }
+}
+
+.comments {
+    grid-area: comments;
+    background-color: #2C3333;
+
+    textarea {
+        background-color: #31535c;
+        border: none;
+        padding: 1rem;
+    }
+
+    input {
+        border: none;
+        padding: 1rem;
+        color: #313333;
+        font-size: 1rem;
+        background-color: #6a9696;
+        cursor: pointer;
+    }
+}

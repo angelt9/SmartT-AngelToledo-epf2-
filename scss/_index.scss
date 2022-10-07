@@ -1,0 +1,99 @@
+/* GRID INDEX */
+
+.contenedor {
+    background-color: #313333;
+    display: grid;
+    grid-template-columns: auto auto min-content;
+    grid-template-rows: min-content auto auto min-content min-content;
+    overflow: auto;
+    justify-content: center;
+    align-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "section section section2"
+        "provs provs provs"
+        "footer footer footer";
+}
+
+/* MAIN */
+.main {
+    grid-area: main;
+}
+
+/* SECTION */
+.section {
+    grid-area: section;
+    background-color: #343b3b;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+
+    h4 {
+        padding: 1rem;
+        font-size: 1.8rem;
+    }
+
+    p {
+        padding: 1rem;
+    }
+
+    a {
+        padding: 1rem;
+
+        button {
+            background-color: #1d2020;
+            border: none;
+            color: #E7F6F2;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                color: #397686;
+            }
+
+        }
+    }
+}
+
+.section2 {
+    grid-area: section2;
+    background-color: #2C3333;
+
+    img {
+        width: 26rem;
+    }
+}
+
+/* PROOVEDORES */
+.provs {
+    grid-area: provs;
+    background-color: #313333;
+    padding: 1rem;
+
+    h2 {
+        text-align: center;
+    }
+
+    div {
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+    }
+
+    a img {
+        @include proovedores;
+    }
+}
