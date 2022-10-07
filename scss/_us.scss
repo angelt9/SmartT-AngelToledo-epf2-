@@ -1,0 +1,102 @@
+
+/* GRID NOSOTROS */
+
+.us {
+    background-color: #1e2222;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: min-content auto auto min-content;
+    overflow: auto;
+    grid-template-areas:
+        "header header"
+        "whatis maps"
+        "pregs form"
+        "footer footer";
+}
+
+.whatis {
+    grid-area: whatis;
+    background-color: #444c4c;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    h1 {
+        padding: 1rem;
+    }
+    p {
+        padding: 1rem;
+    }
+    h2 {
+        padding: 1rem;
+    }
+}
+
+.maps {
+    grid-area: maps;
+    background-color: #313d3d;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h2 {
+        padding: 1rem;
+    }
+}
+
+.pregs {
+    grid-area: pregs;
+    padding: 2rem;
+    background-color: #412842;
+}
+
+.form {
+    grid-area: form;
+    padding: 1rem;
+    background-color: #372938;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form{
+        fieldset {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: space-between;
+            border: #412842 solid;
+            background-color: #5c395e;
+            border-radius: 1rem;
+            legend {
+                font-weight: 600;
+                font-size: 1.4rem;
+            }
+            div{
+                input {
+
+                    background-color: #2C3333;
+                    border: none;
+                    color: #E7F6F2;
+                    padding: 1rem;
+                    font-size: 1rem;
+                    font-weight: 300;
+                }
+                #texto {
+                    background-color: #855488;
+                    border: none;
+                }
+                a{
+                    input {
+                        cursor: pointer;
+                        transition: .3s;
+                        &:hover{
+                            color: #855488;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+/* GRID PRODUCTOS */
+
+.products {
+    background-color: #1e2222;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: min-content 1fr 1fr 1fr min-content;
+    overflow: auto;
+    grid-template-areas:
+        "header header header"
+        "cats merch merch"
+        "cats merch merch"
+        "cats merch merch"
+        "footer footer footer";
+}
+
+.merch {
+    grid-area: merch;
+    padding: 1rem;
+    background-color: #414e52;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    a {
+        img {
+            width: 24rem;
+            margin: 1rem;
+            border-radius: 1rem;
+        }
+    }
+}
+
+.cats {
+    grid-area: cats;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #313333;
+    font-size: 1.2rem;
+}

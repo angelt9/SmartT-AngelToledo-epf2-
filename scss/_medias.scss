@@ -1,0 +1,199 @@
+/* MEDIA QUERIES max-width:768px */
+
+/* INDEX */
+@media screen and (max-width:1150px) {
+    .contenedor {
+        grid-template-columns: auto auto;
+        overflow: auto;
+        grid-template-rows: min-content auto min-content auto auto min-content;
+        grid-template-areas:
+            "header header"
+            "main main"
+            "section section"
+            "section2 section2"
+            "provs provs"
+            "footer footer";
+    }
+
+    .section2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .section2 img {
+        width: 20rem;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    .header div a i {
+        font-size: 5rem;
+    }
+
+    .header h1 a {
+        font-size: 2.4rem;
+    }
+
+    .main {
+        background-size: 100% 100%;
+    }
+
+    .main h3 a {
+        position: relative;
+        top: 16rem;
+        left: 14rem;
+    }
+
+    .section img {
+        width: 20rem;
+    }
+
+    .img1 {
+        width: 8rem;
+    }
+
+    .img2 {
+        width: 15rem;
+    }
+
+    .img3 {
+        width: 7rem;
+    }
+
+    .img4 {
+        width: 12rem;
+    }
+
+    /* GUIA PARA NUEVOS */
+
+    .guia {
+        background-color: #1e2222;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: min-content .5fr 1fr auto min-content;
+        grid-template-areas:
+            "header"
+            "foto"
+            "libro"
+            "comments"
+            "footer";
+    }
+
+    .guia img {
+        width: 16rem;
+    }
+
+    .comments img {
+        width: 3rem;
+    }
+
+    /* PRODUCTOS */
+
+    .products {
+        background-color: #223131;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: min-content auto auto min-content;
+        justify-content: center;
+        align-content: center;
+        justify-items: stretch;
+        align-items: stretch;
+        grid-template-areas:
+            "header"
+            "cats"
+            "merch"
+            "footer";
+    }
+
+    .products .merch img {
+        width: 10rem;
+    }
+
+    .cats {
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* SERVICIOS */
+
+    .services {
+        background-color: #1e2222;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto 1fr auto min-content;
+        grid-template-areas:
+            "header"
+            "method"
+            "plans"
+            "footer";
+    }
+
+    .plans {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* NOSOTROS */
+    .us {
+        background-color: #1e2222;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: min-content 1fr auto auto auto min-content;
+        grid-template-areas:
+            "header"
+            "whatis"
+            "maps"
+            "pregs"
+            "form"
+            "footer";
+    }
+}
+
+@media screen and (max-width:670px) {
+    .header nav ul {
+        display: flex;
+        justify-content: center;
+    }
+}
+/* @media screen and (max-width:670px) {
+    
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+    }
+
+    .topnav #myLinks {
+        display: none;
+    }
+
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    .topnav a.icon {
+        background: black;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    
+    .active {
+        background-color: #04AA6D;
+        color: white;
+    }
+} */
